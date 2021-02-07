@@ -4,7 +4,17 @@ seed
 * 개인프로젝트<br />
 * 기간 2021.2.7 ~<br />
 * 사용언어 및 라이브러리 등<br />
-
+  * BACKEND
+    * JAVA
+    * IDE : ECLIPSE
+    * Framework : Spring Framework 4.3.29
+  * FRONTEND
+    * HTML5, CSS#, JavaScript
+    * FullCalandar.js
+  * DB
+    * DBMS 툴 : DBeaver
+    * RDBMS : MaridDB
+    * ERD : dbdiagram.io 사용
 
 Figma (스토리보드)
 ===================
