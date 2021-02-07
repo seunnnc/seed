@@ -4,19 +4,18 @@
 * 프로젝트 진행 이유
   * Today I learned와 비슷하게 자신이 하루동안 한 일을 하루하루 기록하는 것을 만들어 보고자 함
   * Seed라 지은 이유는 하루하루의 경험이 씨앗을 뿌리는 듯한 생각이 들었기 때문
-* 일상을 기록하세요!<br />
 * 개인프로젝트<br />
 * 기간 2021.2.7 ~<br />
-* 사용언어 및 라이브러리 등<br />
+* 개발환경<br />
   * BACKEND
-    * JAVA
+    * JAVA - JDK 1.8
     * IDE : Eclipse
     * Framework : Spring Framework 4.3.29
   * FRONTEND
     * HTML5, CSS#, JavaScript
     * FullCalandar.js
   * DB
-    * DBMS 툴 : DBeaver
+    * 툴 : DBeaver
     * RDBMS : MaridDB
     * ERD : dbdiagram.io 사용
   * UIUX
