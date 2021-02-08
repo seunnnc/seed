@@ -21,10 +21,10 @@
   * Today I learned와 비슷하게 자신이 하루동안 한 일을 하루하루 기록하는 것을 만들어 보고자 함
   * Seed라 지은 이유는 하루하루의 경험이 씨앗을 뿌리는 듯한 생각이 들었기 때문
 
-2.Figma (스토리보드)
+2.Figma ()
 ===================
 * figma 링크 <br />
-  https://www.figma.com/file/edHo3c5vFPAOhY96I4TexD/SEED
+  https://www.figma.com/proto/edHo3c5vFPAOhY96I4TexD/SEED?node-id=0%3A1
 
 <img width="779" alt="스크린샷 2021-02-07 오후 11 56 22" src="https://user-images.githubusercontent.com/68858357/107150206-169cf100-69a0-11eb-8268-6abc10946f75.png">
 
