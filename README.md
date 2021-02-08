@@ -21,7 +21,7 @@
   * Today I learned와 비슷하게 자신이 하루동안 한 일을 하루하루 기록하는 것을 만들어 보고자 함
   * Seed라 지은 이유는 하루하루의 경험이 씨앗을 뿌리는 듯한 생각이 들었기 때문
 
-2.Figma ()
+2.Figma (prototype)
 ===================
 * figma 링크 <br />
   https://www.figma.com/proto/edHo3c5vFPAOhY96I4TexD/SEED?node-id=0%3A1
