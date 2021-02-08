@@ -9,7 +9,7 @@
     * Framework : Spring Framework 4.3.29
   * FRONTEND
     * HTML5, CSS#, JavaScript
-    * FullCalandar.js
+    * 라이브러리 : FullCalandar.js, Chart.js
   * DB
     * 툴 : DBeaver
     * RDBMS : MaridDB
