@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.container > section {
+	box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginContainer {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	width: 400px;
+	height: 490px;
+	border: 2px solid #E0E0E0;
+	border-radius: 10px;
+	margin-top: 20px;
+	filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.25));
+}
+
+.loginContainer .frm {
+	align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.loginContainer .frm div {
+	box-sizing: border-box;
+	display: grid;
+	width: 280px;
+}
+
+.loginContainer .frm div label {
+	font-size: 1.1rem;
+	margin-bottom: 6px;
+}
+
+.loginContainer .frm div input {
+	border: 2px solid #E0E0E0;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	height: 35px;
+	padding-top: 3px;
+	padding-left: 10px;
+}
+
+.loginContainer img {
+	width: 50%;
+	margin-bottom: 2.5rem;
+}
+
+.frm label {
+	float: left;
+}
+
+.loginContainer .frm button {
+	color: #fff;
+	font-weight: bold;
+	font-size: large;
+	letter-spacing: 10px;
+	width: 280px;
+	height: 35px;
+	background: linear-gradient(91.54deg, #6EE077 0.9%, #22CC88 57.33%, #08CCB4 103.12%);
+	border-radius: 4px;
+	border: none;
+	text-align: center;
+	margin: 25px 0px 0px;
+}
+
+.loginContainer > .joinBox {
+	margin-top: 10px;
+}
+
+.loginContainer > .joinBox #join {
+	color: #22CC88;
+	font-weight: bold;
+	margin-left: 20px;
+}
