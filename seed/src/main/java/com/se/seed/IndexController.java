@@ -13,6 +13,6 @@ public class IndexController {
 	public String index(Model model) {
 		model.addAttribute(Const.TITLE, "SEED");
 		
-		return "/common/index";
+		return ViewRef.INDEX_PAGE;
 	}
 }

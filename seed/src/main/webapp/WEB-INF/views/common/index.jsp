@@ -6,15 +6,12 @@
 		<meta charset="UTF-8">
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
 		
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/index.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-		
-		<!-- JS -->
-    	<script src="/assets/js/common.js"></script>
 		
 		<!-- title -->
 		<title>${title}</title>
@@ -33,6 +30,15 @@
 				</div>
 			</div>
 		</div>
-		<script src="/assets/js/user.js"></script>
+		
+		<script>
+			function joinBtn() {
+				location.href='/user/join';
+			}
+	
+			function loginBtn() {
+				location.href='/user/login';
+			}
+		</script>
 	</body>
 </html>
