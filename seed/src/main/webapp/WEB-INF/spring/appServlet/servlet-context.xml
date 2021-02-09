@@ -61,7 +61,7 @@
 	
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/rest/*" />
+			<mvc:mapping path="/record/**" />
 			<beans:bean class="com.se.seed.RecordInterceptor"></beans:bean>
 		</mvc:interceptor>
 	</mvc:interceptors> -->

@@ -9,12 +9,12 @@
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 		
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/common.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 		
 		<!-- JS -->
-    	<script src="/assets/js/user.js"></script>
+    	<script src="/assets/js/common.js"></script>
 		
 		<!-- title -->
 		<title>${title}</title>
@@ -23,7 +23,7 @@
 		<div class="indexContainer">
 			<div class="opacityBox"></div>
 			<div class="startBox">
-				<img alt="seed_logo" src="/assets/img/indexlogo.png">
+				<img alt="seed_logo" src="/assets/img/logo.png">
 				<button type="button" onclick="loginBtn()">
 					로그인
 				</button>
