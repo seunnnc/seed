@@ -31,4 +31,4 @@
 3.ERD
 ==========
 * https://dbdiagram.io/home 사용함<br />
-<img width="891" alt="스크린샷 2021-02-08 오전 12 53 19" src="https://user-images.githubusercontent.com/68858357/107151830-17d21c00-69a8-11eb-88e7-5a61836dc4c9.png">
+<img width="802" alt="스크린샷 2021-02-09 오후 10 26 08" src="https://user-images.githubusercontent.com/68858357/107370083-df584c80-6b25-11eb-98fe-6fe5134a5394.png">
