@@ -8,6 +8,8 @@
     flex-direction: column;
 }
 
+/* 1. 로그인 */
+
 .loginContainer {
 	display: flex;
     align-items: center;
@@ -81,4 +83,89 @@
 	color: #22CC88;
 	font-weight: bold;
 	margin-left: 20px;
+}
+
+.loginContainer > .joinBox #join:hover {
+	cursor: pointer;
+}
+
+/* 2. 회원가입 */
+
+.joinContainer {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	width: 400px;
+	height: 600px;
+	border: 2px solid #E0E0E0;
+	border-radius: 10px;
+	margin-top: 20px;
+	filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.25));
+}
+
+.joinContainer .frm {
+	align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.joinContainer .frm div {
+	box-sizing: border-box;
+	display: grid;
+	width: 280px;
+}
+
+.joinContainer .frm div label {
+	font-size: 1.1rem;
+	margin-bottom: 6px;
+}
+
+.joinContainer .frm div input {
+	border: 2px solid #E0E0E0;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	height: 35px;
+	padding-top: 3px;
+	padding-left: 10px;
+}
+
+.joinContainer img {
+	width: 50%;
+	margin-bottom: 2.5rem;
+}
+
+.frm label {
+	float: left;
+}
+
+.joinContainer .frm button {
+	color: #fff;
+	font-weight: bold;
+	font-size: large;
+	letter-spacing: 10px;
+	width: 280px;
+	height: 35px;
+	background: linear-gradient(91.54deg, #6EE077 0.9%, #22CC88 57.33%, #08CCB4 103.12%);
+	border-radius: 4px;
+	border: none;
+	text-align: center;
+	margin: 25px 0px 0px;
+}
+
+.joinContainer > .loginBox {
+	margin-top: 10px;
+}
+
+.joinContainer > .loginBox #login {
+	color: #22CC88;
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+.joinContainer > .loginBox #login:hover {
+	cursor: pointer;
 }
