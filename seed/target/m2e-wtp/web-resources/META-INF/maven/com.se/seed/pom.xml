@@ -102,7 +102,14 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
-				
+		
+		<!-- gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.3.1</version>
+		</dependency>
+
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>

@@ -25,6 +25,10 @@ public class UserService {
 		return mapper.insUser(param);
 	}
 	
+	public int chkEmail(UserPARAM param) {
+		return mapper.chkEmail(param);
+	}
+	
 	//1: 로그인 성공, 2: 이메일 없음, 3: 비밀번호 없음
 	public int login(UserPARAM param) {
 		if(param.getUser_email().equals("")) { return Const.NO_EMAIL; }

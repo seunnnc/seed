@@ -3,7 +3,13 @@
 	<form class="frm" id="joinFrm" action="/user/join" method="post">
 		<img alt="seed_logo" src="/assets/img/logo.png">
 		<div>
-			<label for="user_email">이메일</label>
+			<div class="emailBox">
+				<label for="user_email">이메일</label>
+				<div class="msg">${msg}</div>
+				<div class="chkEmail">
+					<button type="button" id=chkEmail onclick="doubleChk()" value="N">중복확인</button>
+				</div>
+			</div>
 			<input type="email" name="user_email" placeholder="이메일을 입력하세요">
 			<label for="user_name">이름</label>
 			<input type="text" name="user_name" placeholder="이름을 입력하세요">
@@ -19,9 +25,3 @@
 		<span id="login" onclick="loginBtn()">로그인하기</span>
 	</div>
 </div>
-
-<!-- <script>
-	function loginBtn() {
-		location.href='/user/login';
-	}
-</script> -->

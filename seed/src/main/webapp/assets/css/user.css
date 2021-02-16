@@ -169,3 +169,7 @@
 .joinContainer > .loginBox #login:hover {
 	cursor: pointer;
 }
+
+.chkEmail button:hover {
+	cursor: pointer;
+}

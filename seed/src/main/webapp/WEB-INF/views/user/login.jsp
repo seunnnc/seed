@@ -4,9 +4,11 @@
 		<img alt="seed_logo" src="/assets/img/logo.png">
 		<div>
 			<label for="user_email">이메일</label>
-			<input type="email" id="user_email" placeholder="이메일을 입력하세요">
+			<div class="msg">${data.msg}</div>
+			<input type="email" name="user_email" placeholder="이메일을 입력하세요">
 			<label for="user_pw">비밀번호</label>
-			<input type="password" id="user_pw" placeholder="비밀번호를 입력하세요">
+			<div class="msg">${data.msg}</div>
+			<input type="password" name="user_pw" placeholder="비밀번호를 입력하세요">
 		</div>
 		<button type="submit">로그인</button>
 	</form>
@@ -16,9 +18,9 @@
 	</div>
 </div>
 
-
-<script>
+<script></script>
+<!-- <script>
 	function joinBtn() {
 		location.href='/user/join';
 	}
-</script>
+</script> -->

@@ -9,4 +9,5 @@ import com.se.seed.user.model.UserVO;
 public interface UserMapper {
 	public int insUser(UserVO p);
 	public UserVO selUser(UserPARAM p);
+	public int chkEmail(UserPARAM p);
 }

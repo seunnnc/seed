@@ -82,3 +82,8 @@ html,body{
 	flex-grow: 3;
 	top: 50%;
 }
+
+.msg {
+	color: #E8754E;
+	font-weight: 13px;
+}

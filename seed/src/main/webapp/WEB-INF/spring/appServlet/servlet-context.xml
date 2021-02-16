@@ -48,6 +48,16 @@
 		<beans:property name="configLocation" value="/WEB-INF/spring/mybatis-alias.xml"></beans:property>
 	</beans:bean>
 	
+	<beans:bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<beans:property name="messageConverters">
+			<beans:list>
+				<beans:ref bean="jsonMessageConverter"/>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+	
+	<beans:bean id="jsonMessageConverter" class="org.springframework.http.converter.json.GsonHttpMessageConverter" />
+
 	<!-- 마이바티스 스캔 dao 빈등록 -->
 	<mybatis-spring:scan base-package="com.se.seed" />
 

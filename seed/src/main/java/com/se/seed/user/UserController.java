@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.se.seed.Const;
@@ -53,6 +54,18 @@ public class UserController {
 		return "redirect:/user/join?err=" + result;
 	}
 	
+	// 이메일 중복체크 
+	@ResponseBody
+	@RequestMapping(value="/chkEmail", method=RequestMethod.POST)
+	public int chkEmail(UserPARAM param) {
+		int result = service.chkEmail(param);
+		
+		System.out.println("result : " + result);
+		
+		return result;
+	}
+	
+	
 	// 로그인
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String login(Model model) {
@@ -68,6 +81,8 @@ public class UserController {
 		
 		if(result == Const.SUCCESS) {
 			hs.setAttribute(Const.LOGIN_USER, param);
+			
+			System.out.println("로그인 성공!");
 			return "redirect:/record/main";
 		}
 		
