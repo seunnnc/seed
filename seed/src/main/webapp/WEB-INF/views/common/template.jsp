@@ -14,6 +14,9 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 		
+		<!-- JS -->
+		<script src="../../assets/js/user.js"></script>
+		
 		<!-- title -->
 		<title>${title}</title>
 	</head>
@@ -49,11 +52,7 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			function goMain() {
-				location.href='/record/main';
-			}
-		</script>
 		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	</body>
 </html>

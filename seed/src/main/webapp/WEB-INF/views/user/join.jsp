@@ -4,13 +4,13 @@
 		<img alt="seed_logo" src="/assets/img/logo.png">
 		<div>
 			<label for="user_email">이메일</label>
-			<input type="email" id="user_email" placeholder="이메일을 입력하세요">
+			<input type="email" name="user_email" placeholder="이메일을 입력하세요">
 			<label for="user_name">이름</label>
-			<input type="text" id="user_name" placeholder="이름을 입력하세요">
+			<input type="text" name="user_name" placeholder="이름을 입력하세요">
 			<label for="user_pw">비밀번호</label>
-			<input type="password" id="user_pw" placeholder="비밀번호를 입력하세요">
+			<input type="password" name="user_pw" placeholder="비밀번호를 입력하세요">
 			<label for="chk_pw">비밀번호확인</label>
-			<input type="password" id="chk_pw" placeholder="비밀번호를 입력하세요">
+			<input type="password" name="chk_pw" placeholder="비밀번호를 입력하세요">
 		</div>
 		<button type="submit">가입하기</button>
 	</form>
@@ -20,8 +20,8 @@
 	</div>
 </div>
 
-<script>
+<!-- <script>
 	function loginBtn() {
 		location.href='/user/login';
 	}
-</script>
+</script> -->

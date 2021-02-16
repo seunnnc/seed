@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.se.seed.user.UserMapper">
+	<insert id="insUser" parameterType="UserVO">
+		INSERT INTO user
+		(user_email, user_pw, salt, user_name)
+		VALUES
+		(#{user_email}, #{user_pw}, #{salt}, #{user_name})
+	</insert>
+	
+	<select id="selUser" parameterType="UserPARAM" resultType="UserVO">
+		SELECT i_user, user_email, user_name, user_pw, salt, profile_img, created_date, modified_date
+		FROM user
+		WEHRE 
+		<if test="user_email != null and user_email != ''">user_email = #{user_email}</if>
+	</select>
+</mapper>
