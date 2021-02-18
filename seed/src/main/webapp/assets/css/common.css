@@ -73,6 +73,17 @@ html,body{
     justify-content: flex-end;
 }
 
+.container .header .ect > span > a {
+	color: #22CC88;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.container .header .ect .dropdown {
+  	position: relative;
+  	display: inline;
+}
+
 .container .header .ect .pImgContainer {
 	height: 50px;
     border-radius: 50%;
@@ -82,12 +93,52 @@ html,body{
 	height: 100%;
 }
 
-.container .header .ect a {
-    color: #22CC88;
-    font-weight: bold;
-    text-decoration: none;
+.container .header .ect .pImgContainer img:hover {
+	cursor: pointer;
 }
 
+.container .header .ect .dropdown .dropdownContent {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	min-width: 140px;
+	overflow: auto;
+	right: 0;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 3px;
+	z-index: 1;
+}
+
+.dropdownContent hr {
+	margin: auto;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    width: 90%;
+    margin: 4px 3%;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.dropdownContent a {
+	color: black;
+	text-decoration: none;
+	display: block;
+	margin: 6px;
+}
+
+
+.dropdownContent a:hover {
+	color: #22CC88;
+	font-weight: bold;
+}
+
+.container .header .ect .dropdown .show {
+	display: flex;
+    flex-direction: column;
+}
 
 /* 2. content */
 .container .content {

@@ -29,5 +29,3 @@
 		<span id="join" onclick="joinBtn()">등록하기</span>
 	</div>
 </div>
-
-<script></script>

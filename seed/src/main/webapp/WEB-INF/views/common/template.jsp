@@ -37,16 +37,23 @@
 								${loginUser.user_name}
 							</span>님 환영합니다 
 						</div>
-						<div class="logoutBox" id="headerLogout"><a href="/user/logout">로그아웃</a></div>
-						<div class="pImgContainer" >
-							<c:choose>
-								<c:when test="${loginUser.profile_img != null}">
-									<img class="pImg" src="/assets/img/user/${loginUSer.i_user}/${loginUser.profile_img}">
-								</c:when>
-								<c:otherwise>
-									<img class="pImg" src="/assets/img/default_profile_img.png">
-								</c:otherwise>
-							</c:choose>
+						<div class="dropdown">
+							<div class="pImgContainer">
+								<c:choose>
+									<c:when test="${loginUser.profile_img != null}">
+										<img class="pImg" onclick="showDrop()" src="/assets/img/user/${loginUSer.i_user}/${loginUser.profile_img}">
+									</c:when>
+									<c:otherwise>
+										<img class="pImg" onclick="showDrop()" src="/assets/img/default_profile_img.png">
+									</c:otherwise>
+								</c:choose>
+							</div>
+							<div class="dropdownContent" id="userDropdown">
+								<a href="#">나의 정보</a>
+							    <a href="#">나의 카테고리</a>
+							    <hr />
+							    <a href="/user/logout">로그아웃</a>
+							</div>
 						</div>
 					</c:if>
 					<c:if test="${loginUser == null}">
@@ -77,6 +84,24 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			function showDrop() {
+			  document.getElementById('userDropdown').classList.toggle('show');
+			}
+
+			window.onclick = function(event) {
+			  if (!event.target.matches('.pImg')) {
+			    var dropdowns = document.getElementsByClassName('dropdownContent');
+			    var i;
+			    for (i = 0; i < dropdowns.length; i++) {
+			      var openDropdown = dropdowns[i];
+			      if (openDropdown.classList.contains('show')) {
+			        openDropdown.classList.remove('show');
+			      }
+			    }
+			  }
+			}
+		</script>
 		<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	</body>
