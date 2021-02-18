@@ -78,6 +78,7 @@ public class UserController {
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(UserPARAM param, HttpSession hs, RedirectAttributes ra) {
 		int result = service.login(param);
+		System.out.println("result : " + result);
 		
 		if(result == Const.SUCCESS) {
 			hs.setAttribute(Const.LOGIN_USER, param);
@@ -86,16 +87,27 @@ public class UserController {
 			return "redirect:/record/main";
 		}
 		
-		String msg = null;
+		String emailMsg = null;
+		String pwMsg = null;
 		if(result == Const.NO_EMAIL) {
-			msg = "이메일을 확인해주세요";
+			System.out.println("NO_EMAIL result : " + result);
+			emailMsg = "이메일을 확인해주세요";
 		} else if(result == Const.NO_PW) {
-			msg = "비밀번호를 확인해주세요";
+			System.out.println("NO_PW result : " + result);
+			pwMsg = "비밀번호를 확인해주세요";
 		}
 		
-		param.setMsg(msg);
+		param.setEmailMsg(emailMsg);
+		param.setPwMsg(pwMsg);
 		ra.addFlashAttribute("data", param);
 		return "redirect:/user/login";
+	}
+	
+	//로그아웃
+	@RequestMapping(value="/logout", method=RequestMethod.GET)
+	public String logout(HttpSession hs) {
+		hs.invalidate();
+		return "redirect:/";
 	}
 	
 	/*

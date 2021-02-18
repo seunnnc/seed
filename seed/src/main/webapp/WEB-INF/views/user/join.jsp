@@ -10,13 +10,13 @@
 					<button type="button" id=chkEmail onclick="doubleChk()" value="N">중복확인</button>
 				</div>
 			</div>
-			<input type="email" name="user_email" placeholder="이메일을 입력하세요">
+			<input type="email" name="user_email" placeholder="이메일을 입력하세요" required="required">
 			<label for="user_name">이름</label>
-			<input type="text" name="user_name" placeholder="이름을 입력하세요">
+			<input type="text" name="user_name" placeholder="이름을 입력하세요" required="required">
 			<label for="user_pw">비밀번호</label>
-			<input type="password" name="user_pw" placeholder="비밀번호를 입력하세요">
+			<input type="password" name="user_pw" placeholder="비밀번호를 입력하세요" required="required">
 			<label for="chk_pw">비밀번호확인</label>
-			<input type="password" name="chk_pw" placeholder="비밀번호를 입력하세요">
+			<input type="password" name="chk_pw" placeholder="비밀번호를 입력하세요" required="required">
 		</div>
 		<button type="submit">가입하기</button>
 	</form>

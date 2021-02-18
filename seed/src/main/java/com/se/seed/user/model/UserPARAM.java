@@ -1,14 +1,19 @@
 package com.se.seed.user.model;
 
 public class UserPARAM extends UserVO {
-	private String msg;
-
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
+	private String emailMsg;
+	private String pwMsg;
 	
+	public String getEmailMsg() {
+		return emailMsg;
+	}
+	public void setEmailMsg(String emailMsg) {
+		this.emailMsg = emailMsg;
+	}
+	public String getPwMsg() {
+		return pwMsg;
+	}
+	public void setPwMsg(String pwMsg) {
+		this.pwMsg = pwMsg;
+	}
 }
