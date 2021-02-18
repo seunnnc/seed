@@ -4,13 +4,21 @@
 		<img alt="seed_logo" src="/assets/img/logo.png">
 		<div>
 			<div>
-				<label for="user_email">이메일</label>
-				<div class="msg">${data.emailMsg}</div>
-				<input type="email" name="user_email" placeholder="이메일을 입력하세요" >
+				<div class="display-flex">
+					<label for="user_email">이메일</label>
+					<div class="msg">
+						<span>${data.emailMsg}</span>
+					</div>
+				</div>
+				<input type="email" name="user_email" value="${data.user_email}" placeholder="이메일을 입력하세요" >
 			</div>
 			<div>
-				<label for="user_pw">비밀번호</label>
-				<div class="msg">${data.pwMsg}</div>
+				<div class="display-flex">
+					<label for="user_pw">비밀번호</label>
+					<div class="msg">
+						<span>${data.pwMsg}</span>
+					</div>
+				</div>
 				<input type="password" name="user_pw" placeholder="비밀번호를 입력하세요" > 
 			</div>
 		</div>

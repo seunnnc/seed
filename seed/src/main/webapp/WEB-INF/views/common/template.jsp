@@ -32,21 +32,25 @@
 				</div>
 				<div class="ect flex-grow">
 					<c:if test="${loginUser != null}">
-						<div class="containerPImg mL10" >
+						<div class="margin-right-20">
+							<span id="user_name">
+								${loginUser.user_name}
+							</span>님 환영합니다 
+						</div>
+						<div class="logoutBox" id="headerLogout"><a href="/user/logout">로그아웃</a></div>
+						<div class="pImgContainer" >
 							<c:choose>
 								<c:when test="${loginUser.profile_img != null}">
-									<img class="pImg" src="/res/img/user/${loginUSer.i_user}/${loginUser.profile_img}">
+									<img class="pImg" src="/assets/img/user/${loginUSer.i_user}/${loginUser.profile_img}">
 								</c:when>
 								<c:otherwise>
-									<img class="pImg" src="/res/img/default_profile_img.png">
+									<img class="pImg" src="/assets/img/default_profile_img.png">
 								</c:otherwise>
 							</c:choose>
 						</div>
-						<div class="mL10"><span id="user_name">${loginUser.name}</span>님 환영합니다 </div>
-						<div class="logoutBox" id="headerLogout"><a href="/user/logout">로그아웃</a></div>
 					</c:if>
 					<c:if test="${loginUser == null}">
-						<span>SEED의 계정이 있으신가요?</span>
+						<span class="margin-right-20">SEED의 계정이 있으신가요?</span>
 						<span><a href="/user/login">로그인</a></span>
 					</c:if>
 				</div>
@@ -68,7 +72,7 @@
 						<span>wnseunc@gmail.com</span>
 					</h3>
 				</div>
-				<div class="coptright">
+				<div class="copyright">
 					<h2>© SE CHOI, 2021</h2>
 				</div>
 			</div>

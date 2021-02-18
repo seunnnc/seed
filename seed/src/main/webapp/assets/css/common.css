@@ -15,6 +15,21 @@ html,body{
 	position: relative;
 }
 
+.display-flex {
+	display: flex;
+}
+
+.display-flex-grow {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+.margin-right-20 {
+	margin-right: 20px;
+}
+
 /* 1. header */
 .container .header {
 	width: 100%;
@@ -32,8 +47,12 @@ html,body{
 }
 
 .container .header .flex-grow {
-	padding: 10px 20px;
+	padding: 10px 30px;
 	flex-grow: 1;
+}
+.container .header .logo {
+	align-items: center;
+    display: flex;
 }
 
 .container .header #logo {
@@ -47,9 +66,28 @@ html,body{
 	cursor: pointer;
 }
 
-.container .header .ect span {
-	float: right;
+.container .header .ect {
+    align-items: center;
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: flex-end;
 }
+
+.container .header .ect .pImgContainer {
+	height: 50px;
+    border-radius: 50%;
+}
+
+.container .header .ect .pImgContainer img {
+	height: 100%;
+}
+
+.container .header .ect a {
+    color: #22CC88;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 
 /* 2. content */
 .container .content {
@@ -84,14 +122,11 @@ html,body{
 
 .footer .copyright {
 	flex-grow: 2;
-}
-
-.footer .copyright h2 {
-	position: relative;
-	top: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .msg {
 	color: #E8754E;
-	font-weight: 13px;
+	width: 160px;
 }

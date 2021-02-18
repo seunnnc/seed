@@ -31,18 +31,23 @@
     margin-bottom: 10px;
 }
 
-.loginContainer .frm div {
+.loginContainer .frm > div {
 	box-sizing: border-box;
 	display: grid;
 	width: 280px;
 }
 
-.loginContainer .frm div label {
+.loginContainer .frm > div label {
 	font-size: 1.1rem;
 	margin-bottom: 6px;
+	width: 120px;
 }
 
-.loginContainer .frm div input {
+.loginContainer .frm > div span {
+	float: right;
+}
+
+.loginContainer .frm > div input {
 	border: 2px solid #E0E0E0;
 	box-sizing: border-box;
 	border-radius: 4px;
@@ -50,6 +55,7 @@
 	height: 35px;
 	padding-top: 3px;
 	padding-left: 10px;
+	width: 280px;
 }
 
 .loginContainer img {
@@ -121,6 +127,7 @@
 .joinContainer .frm div label {
 	font-size: 1.1rem;
 	margin-bottom: 6px;
+	flex-grow: 1;
 }
 
 .joinContainer .frm div input {
