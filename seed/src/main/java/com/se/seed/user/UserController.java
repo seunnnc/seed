@@ -90,10 +90,8 @@ public class UserController {
 		String emailMsg = null;
 		String pwMsg = null;
 		if(result == Const.NO_EMAIL) {
-			System.out.println("NO_EMAIL result : " + result);
 			emailMsg = "이메일을 확인해주세요";
 		} else if(result == Const.NO_PW) {
-			System.out.println("NO_PW result : " + result);
 			pwMsg = "비밀번호를 확인해주세요";
 		}
 		
@@ -108,7 +106,7 @@ public class UserController {
 	public String logout(HttpSession hs) {
 		hs.invalidate();
 		return "redirect:/";
-	}
+	} 
 	
 	/*
 	@RequestMapping("/profile")
