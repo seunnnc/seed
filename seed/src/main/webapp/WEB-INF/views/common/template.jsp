@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,6 +11,7 @@
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/common.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/user.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/record.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 		
@@ -30,7 +31,24 @@
 					<img id="logo" alt="seed_logo" src="/assets/img/logo.png" onclick="goMain()">
 				</div>
 				<div class="ect flex-grow">
-					<span>test</span>
+					<c:if test="${loginUser != null}">
+						<div class="containerPImg mL10" >
+							<c:choose>
+								<c:when test="${loginUser.profile_img != null}">
+									<img class="pImg" src="/res/img/user/${loginUSer.i_user}/${loginUser.profile_img}">
+								</c:when>
+								<c:otherwise>
+									<img class="pImg" src="/res/img/default_profile_img.png">
+								</c:otherwise>
+							</c:choose>
+						</div>
+						<div class="mL10"><span id="user_name">${loginUser.name}</span>님 환영합니다 </div>
+						<div class="logoutBox" id="headerLogout"><a href="/user/logout">로그아웃</a></div>
+					</c:if>
+					<c:if test="${loginUser == null}">
+						<span>SEED의 계정이 있으신가요?</span>
+						<span><a href="/user/login">로그인</a></span>
+					</c:if>
 				</div>
 			</div>
 			<section class="content">

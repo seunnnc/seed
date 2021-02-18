@@ -15,7 +15,7 @@ public class RecordController {
 	
 	@RequestMapping(value="/main", method=RequestMethod.GET)
 	public String main(Model model) {
-		model.addAttribute(Const.TITLE, "SEED - 오늘을 기록하세");
+		model.addAttribute(Const.TITLE, "SEED - 오늘을 기록하세요");
 		model.addAttribute(Const.VIEW,"record/main");
 		
 		return ViewRef.TEMP_DEFAULT;
