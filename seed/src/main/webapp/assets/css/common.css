@@ -44,6 +44,7 @@ html,body{
 	justify-content: space-around;
 	flex-flow: row wrap;
 	align-items: stretch;
+	z-index: 1;
 }
 
 .container .header .flex-grow {

@@ -1,17 +1,16 @@
 @charset "UTF-8";
 .mainContainer {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row wrap;    
+	width: 100%;
 }
 
 .mainContainer .leftContainer {
 	flex-grow: 1;
 	width:50%;
-	background: #343434;
 }
 
 .mainContainer .rightContainer {
 	flex-grow: 1;
 	width:50%;
-	background: skyblue;
 }

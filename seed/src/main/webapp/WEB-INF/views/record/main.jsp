@@ -3,26 +3,36 @@
 <!DOCTYPE html>
 <div class="mainContainer">
 	<div class="leftContainer">
-		<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac. Quis enim lobortis scelerisque fermentum dui faucibus in. Consequat semper viverra nam libero justo laoreet sit amet. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Ut sem nulla pharetra diam sit amet nisl suscipit. Sed sed risus pretium quam vulputate dignissim suspendisse in est. Morbi tristique senectus et netus et malesuada. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Non diam phasellus vestibulum lorem sed. Sed odio morbi quis commodo odio. Integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Molestie at elementum eu facilisis sed odio morbi. Lectus proin nibh nisl condimentum.
-
-Arcu non odio euismod lacinia at quis risus. Elit duis tristique sollicitudin nibh sit amet commodo. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Erat pellentesque adipiscing commodo elit at imperdiet dui. Semper viverra nam libero justo laoreet sit amet cursus sit. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Mi bibendum neque egestas congue quisque egestas diam. Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Aliquam sem fringilla ut morbi. Malesuada pellentesque elit eget gravida cum. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue interdum velit euismod in pellentesque massa placerat. Ultrices in iaculis nunc sed augue lacus. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Urna et pharetra pharetra massa. Nisl pretium fusce id velit ut tortor pretium. Sit amet consectetur adipiscing elit pellentesque.
-
-Porta non pulvinar neque laoreet. Vel pretium lectus quam id leo in vitae. Auctor urna nunc id cursus metus aliquam eleifend mi in. Scelerisque viverra mauris in aliquam. Eu turpis egestas pretium aenean pharetra magna. Sed viverra tellus in hac habitasse platea dictumst. Nunc sed id semper risus in hendrerit. Sit amet facilisis magna etiam tempor orci eu. Sapien nec sagittis aliquam malesuada bibendum. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum.
-
-Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Et malesuada fames ac turpis egestas maecenas. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. At tellus at urna condimentum mattis pellentesque id nibh. Neque ornare aenean euismod elementum nisi quis eleifend. In egestas erat imperdiet sed euismod nisi. Id donec ultrices tincidunt arcu. In nulla posuere sollicitudin aliquam. Fermentum odio eu feugiat pretium. Imperdiet massa tincidunt nunc pulvinar sapien. Mi in nulla posuere sollicitudin aliquam ultrices. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Lorem sed risus ultricies tristique nulla aliquet enim tortor at. Eleifend mi in nulla posuere sollicitudin. Feugiat vivamus at augue eget arcu dictum varius. Pretium fusce id velit ut tortor pretium viverra. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Id faucibus nisl tincidunt eget nullam non nisi. Proin fermentum leo vel orci porta.
-
-Id leo in vitae turpis massa sed. Suspendisse potenti nullam ac tortor. Placerat duis ultricies lacus sed turpis tincidunt. Suspendisse interdum consectetur libero id. Quis imperdiet massa tincidunt nunc pulvinar. Dignissim enim sit amet venenatis urna cursus eget. Sollicitudin nibh sit amet commodo. Habitant morbi tristique senectus et netus et malesuada fames ac. Orci dapibus ultrices in iaculis nunc sed augue. Egestas sed sed risus pretium quam vulputate. Lacus sed turpis tincidunt id aliquet risus. Est placerat in egestas erat imperdiet. Non arcu risus quis varius quam quisque. Viverra orci sagittis eu volutpat odio. Facilisis gravida neque convallis a cras semper auctor neque. Diam volutpat commodo sed egestas egestas fringilla. Malesuada proin libero nunc consequat. Justo eget magna fermentum iaculis eu.</span>
+		<div class="todoContainer">
+			<p>오늘의 씨앗을 뿌려보세요 🌱</p>
+			<form action="/record/todo" method="post">
+				<div>
+				<input type="hidden" value="${loginUser.i_user}">
+					<select name="i_category" id="category-select">
+						<option value="0">카테고리 선택</option>
+						<c:forEach items="${categoryList}" var="item">
+							<option value="${item.i_category}">${item.category_name}</option>
+						</c:forEach>
+					</select>
+				</div>
+				<textarea name="todo_ctnt" cols="30" rows="2" maxlength="30" placeholder="오늘의 계획을 입력해보세요!" required="required">
+					${item.todo_ctnt}
+				</textarea>
+				<button id="todoBtn">등록하기</button>
+			</form>
+		</div>
+		<div class="todayRecordConatiner">
+			<p>오늘은 어땠나요?</p>
+			<form action="/record/diary" method="post">
+				<input type="hidden" value="${loginUser.i_user}">
+				<textarea name="content" cols="50" rows="10" maxlength="500" placeholder="오늘하루를 리뷰해 보세요!" required="required">
+					${item.content}
+				</textarea>
+				<button id="todoBtn">등록하기</button>
+			</form>
+		</div>
 	</div>
 	<div class="rightContainer">
-			<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac. Quis enim lobortis scelerisque fermentum dui faucibus in. Consequat semper viverra nam libero justo laoreet sit amet. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Ut sem nulla pharetra diam sit amet nisl suscipit. Sed sed risus pretium quam vulputate dignissim suspendisse in est. Morbi tristique senectus et netus et malesuada. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Non diam phasellus vestibulum lorem sed. Sed odio morbi quis commodo odio. Integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Molestie at elementum eu facilisis sed odio morbi. Lectus proin nibh nisl condimentum.
-
-Arcu non odio euismod lacinia at quis risus. Elit duis tristique sollicitudin nibh sit amet commodo. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Erat pellentesque adipiscing commodo elit at imperdiet dui. Semper viverra nam libero justo laoreet sit amet cursus sit. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Mi bibendum neque egestas congue quisque egestas diam. Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Aliquam sem fringilla ut morbi. Malesuada pellentesque elit eget gravida cum. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Nullam non nisi est sit amet facilisis magna etiam tempor. Augue interdum velit euismod in pellentesque massa placerat. Ultrices in iaculis nunc sed augue lacus. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Urna et pharetra pharetra massa. Nisl pretium fusce id velit ut tortor pretium. Sit amet consectetur adipiscing elit pellentesque.
-
-Porta non pulvinar neque laoreet. Vel pretium lectus quam id leo in vitae. Auctor urna nunc id cursus metus aliquam eleifend mi in. Scelerisque viverra mauris in aliquam. Eu turpis egestas pretium aenean pharetra magna. Sed viverra tellus in hac habitasse platea dictumst. Nunc sed id semper risus in hendrerit. Sit amet facilisis magna etiam tempor orci eu. Sapien nec sagittis aliquam malesuada bibendum. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum.
-
-Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Et malesuada fames ac turpis egestas maecenas. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. At tellus at urna condimentum mattis pellentesque id nibh. Neque ornare aenean euismod elementum nisi quis eleifend. In egestas erat imperdiet sed euismod nisi. Id donec ultrices tincidunt arcu. In nulla posuere sollicitudin aliquam. Fermentum odio eu feugiat pretium. Imperdiet massa tincidunt nunc pulvinar sapien. Mi in nulla posuere sollicitudin aliquam ultrices. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Lorem sed risus ultricies tristique nulla aliquet enim tortor at. Eleifend mi in nulla posuere sollicitudin. Feugiat vivamus at augue eget arcu dictum varius. Pretium fusce id velit ut tortor pretium viverra. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Id faucibus nisl tincidunt eget nullam non nisi. Proin fermentum leo vel orci porta.
-
-Id leo in vitae turpis massa sed. Suspendisse potenti nullam ac tortor. Placerat duis ultricies lacus sed turpis tincidunt. Suspendisse interdum consectetur libero id. Quis imperdiet massa tincidunt nunc pulvinar. Dignissim enim sit amet venenatis urna cursus eget. Sollicitudin nibh sit amet commodo. Habitant morbi tristique senectus et netus et malesuada fames ac. Orci dapibus ultrices in iaculis nunc sed augue. Egestas sed sed risus pretium quam vulputate. Lacus sed turpis tincidunt id aliquet risus. Est placerat in egestas erat imperdiet. Non arcu risus quis varius quam quisque. Viverra orci sagittis eu volutpat odio. Facilisis gravida neque convallis a cras semper auctor neque. Diam volutpat commodo sed egestas egestas fringilla. Malesuada proin libero nunc consequat. Justo eget magna fermentum iaculis eu.</span>
-	
+		<div id='calendar'></div>
 	</div>
 </div>

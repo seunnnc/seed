@@ -19,7 +19,15 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		
 		<!-- JS -->
-		<script src="../../assets/js/user.js"></script>
+		<script src="/assets/js/user.js"></script>
+		<script src="../../assets/js/main.js"></script>
+		
+		<!-- Fullcalendar.js -->
+		<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.css">
+		
+		<!-- Chart.js -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 		
 		<!-- title -->
 		<title>${title}</title>
