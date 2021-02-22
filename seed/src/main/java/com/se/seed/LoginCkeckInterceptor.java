@@ -2,7 +2,10 @@ package com.se.seed;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import com.se.seed.record.model.RecordVO;
 
 public class LoginCkeckInterceptor extends HandlerInterceptorAdapter{
 	@Override 
@@ -29,7 +32,7 @@ public class LoginCkeckInterceptor extends HandlerInterceptorAdapter{
 			switch(uriArr[2]) {
 			case "login": case "join":
 				if(!isLogout) {
-					response.sendRedirect("/record/main");
+					response.sendRedirect("/record/main?" + "date=");
 					return false;
 				}
 			}
